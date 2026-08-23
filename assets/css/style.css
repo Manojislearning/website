@@ -90,42 +90,20 @@ header.scrolled {
   align-items: center;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
+.company-logo-link {
+  display: block;
+  width: 150px;
+  height: 64px;
+  overflow: hidden;
   text-decoration: none;
-  gap: 0.8rem;
 }
 
-.logo-mark {
-  height: 40px;
-  width: 40px;
-  transition: height 0.3s ease;
-}
-
-.logo-mark-svg {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  --logo-stroke-width: 10;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--dark-charcoal);
-  font-family: 'Playfair Display', serif;
-}
-
-.logo-text {
-  font-size: 0.75rem;
-  color: var(--brand-accent);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-top: 0.25rem;
+.company-logo-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 nav ul {
@@ -651,13 +629,6 @@ section h2 {
   border-radius: 3px;
 }
 
-.contact-form-logo {
-  display: block;
-  height: 50px;
-  width: 50px;
-  margin: 0 auto 1.5rem;
-}
-
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -961,6 +932,11 @@ footer a:hover {
 @media (max-width: 480px) {
   h1 { font-size: 1.75rem; }
   h2 { font-size: 1.3rem; }
+
+  .company-logo-link {
+    width: 126px;
+    height: 54px;
+  }
   
   .hero-buttons {
     flex-direction: column;

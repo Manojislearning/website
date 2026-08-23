@@ -1,8 +1,0 @@
-<svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<!-- 
-  Animated Logo Mark for Manospace Architects
-  - The lines draw themselves to represent the process of architectural design and construction.
-  - The final form is a geometric 'M' that evokes structure and space.
--->
-<path class="logo-path" d="M15 85V15H35L50 35L65 15H85V85" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
