@@ -1,37 +1,339 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Projects | Manospace Architects</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | The Manospace Architects | BIM & Architecture Case Studies</title>
+    <meta name="description" content="View BIM and architecture projects by The Manospace Architects including glass façade modeling, interior renovations, and parametric design case studies.">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <header id="header">
-    <h1>Our Projects</h1>
-    <p>Selected works by Manospace Architects</p>
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-mark-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 85 V 15 L 50 50 L 15 85 Z" fill="var(--brand-accent)" stroke="var(--brand-accent)" stroke-width="var(--logo-stroke-width)" stroke-linejoin="round"/>
+                    <path d="M50 50 L 85 15 V 85" fill="none" stroke="var(--brand-accent)" stroke-width="var(--logo-stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="logo-text-group">
+                    <div class="logo">MANOSPACE</div>
+                    <div class="logo-text">Architects</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="bim.html">BIM Expertise</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="cta-button">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu" type="button" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
 
-    <ul class="icons">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </header>
+    <!-- Page Header -->
+    <section class="light-bg page-header">
+        <div class="container">
+            <h1>Our Projects</h1>
+            <p class="page-subtitle">BIM-driven architectural projects and case studies.</p>
+        </div>
+    </section>
 
-  <section class="project">
-  <h3>Render-Works</h3>
-  <p>Farm House</p>
+    <!-- Projects Grid -->
+    <section>
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="section-subtitle">Recent Work & Case Studies</div>
+            
+            <div class="projects-grid">
+                <!-- Farmhouse Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/bg01.jpg" alt="Modern farmhouse architectural concept">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Architectural Design</span>
+                        <h3>Modern Farmhouse Concept</h3>
+                        <p class="project-description">A conceptual design for a modern farmhouse, featuring a walkthrough animation. This project highlights our capabilities in residential design and 3D visualization.</p>
+                        <div class="project-meta">
+                            <span class="project-meta-item"><strong>Location:</strong> Conceptual</span>
+                            <span class="project-meta-item"><strong>Year:</strong> 2024</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Architecture</span>
+                            <span class="project-tag">Residential</span>
+                            <span class="project-tag">Visualization</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2070&auto=format&fit=crop" alt="Sapthagiri Hospital glass facade">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Glass Façade BIM</span>
+                        <h3>Sapthagiri Hospital – Glass Façade BIM</h3>
+                        <p class="project-description">BIM-based LOD 400 glass façade model with panel numbering, façade elevations, quantity schedules, and documentation for fabrication and installation coordination.</p>
+                        <div class="project-meta">
+                            <span class="project-meta-item"><strong>Location:</strong> Bengaluru</span>
+                            <span class="project-meta-item"><strong>Year:</strong> 2023</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">BIM</span>
+                            <span class="project-tag">Revit</span>
+                            <span class="project-tag">Glass Façade</span>
+                            <span class="project-tag">LOD 400</span>
+                            <span class="project-tag">Quantity Take-Off</span>
+                            <span class="project-tag">Dynamo</span>
+                        </div>
+                    </div>
+                </div>
 
-  <a href="https://youtu.be/zYtGm1Kwnc0"
-     target="_blank"
-     class="video-thumb">
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=2070&auto=format&fit=crop" alt="RBI Bangalore interior renovation">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Interior Renovation</span>
+                        <h3>RBI Bangalore – Interior Renovation</h3>
+                        <p class="project-description">Interior renovation project involving comprehensive BIM documentation, layout design, material coordination, and shop drawing support for execution.</p>
+                        <div class="project-meta">
+                            <span class="project-meta-item"><strong>Location:</strong> Bangalore</span>
+                            <span class="project-meta-item"><strong>Year:</strong> 2023</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Interior</span>
+                            <span class="project-tag">Renovation</span>
+                            <span class="project-tag">Architecture</span>
+                            <span class="project-tag">BIM</span>
+                        </div>
+                    </div>
+                </div>
 
-    <img src="https://img.youtube.com/vi/zYtGm1Kwnc0/hqdefault.jpg"
-         alt="Project Video Thumbnail"
-         loading="lazy">
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1580582932707-52c5ee385f10?q=80&w=2070&auto=format&fit=crop" alt="Sankya Residence ceiling panel detail">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Shop Drawings</span>
+                        <h3>Sankya Residence – Ceiling Panel Documentation</h3>
+                        <p class="project-description">Ceiling panel calculation and shop drawing support for residential execution with detailed fabrication specifications and assembly drawings.</p>
+                        <div class="project-meta">
+                            <span class="project-meta-item"><strong>Location:</strong> Bengaluru</span>
+                            <span class="project-meta-item"><strong>Year:</strong> 2022</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Shop Drawings</span>
+                            <span class="project-tag">Panel Calculation</span>
+                            <span class="project-tag">Residential</span>
+                        </div>
+                    </div>
+                </div>
 
-    <span class="play-btn"></span>
-  </a>
-</section>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1550610587-d40b90491176?q=80&w=2070&auto=format&fit=crop" alt="Parametric facade elevation study">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Parametric Design</span>
+                        <h3>Parametric Elevation Study</h3>
+                        <p class="project-description">Parametric façade/elevation design using digital modeling workflows and Dynamo automation for complex geometric explorations.</p>
+                        <div class="project-meta">
+                            <span class="project-meta-item"><strong>Type:</strong> Design Study</span>
+                            <span class="project-meta-item"><strong>Year:</strong> 2023</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Parametric Design</span>
+                            <span class="project-tag">BIM</span>
+                            <span class="project-tag">Revit</span>
+                            <span class="project-tag">Dynamo</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581092911882-8473575955e6?q=80&w=2070&auto=format&fit=crop" alt="Architectural BIM model of a residential complex">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">BIM Modeling</span>
+                        <h3>Residential Complex – Architectural BIM</h3>
+                        <p class="project-description">Complete architectural BIM model from LOD 200 to LOD 350 with clash coordination, quantities, and construction documentation.</p>
+                        <div class="project-meta">
+                            <span class="project-meta-item"><strong>Location:</strong> Bengaluru</span>
+                            <span class="project-meta-item"><strong>Year:</strong> 2022</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">BIM</span>
+                            <span class="project-tag">Architecture</span>
+                            <span class="project-tag">Revit</span>
+                            <span class="project-tag">LOD 350</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1550610587-d40b90491176?q=80&w=2070&auto=format&fit=crop" alt="Commercial project quantity take-off chart">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Quantity Take-Off</span>
+                        <h3>Commercial Project – BOQ & Quantity Extraction</h3>
+                        <p class="project-description">BIM-based quantity take-off and BOQ generation for a multi-floor commercial project with material and component schedules.</p>
+                        <div class="project-meta">
+                            <span class="project-meta-item"><strong>Type:</strong> Quantification</span>
+                            <span class="project-meta-item"><strong>Year:</strong> 2023</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Quantity Take-Off</span>
+                            <span class="project-tag">BOQ</span>
+                            <span class="project-tag">BIM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="light-bg">
+        <div class="container">
+            <h2>Project Case Study: Sapthagiri Hospital Glass Façade BIM</h2>
+            <div class="section-subtitle">Detailed Project Overview</div>
+            
+            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2070&auto=format&fit=crop" alt="Sapthagiri Hospital glass facade detail" class="content-image">
+            <div class="case-study-content">
+                <h3>Project Overview</h3>
+                <p>Sapthagiri Hospital required a comprehensive BIM-based glass façade model for a new outpatient wing. The project demanded precise LOD 400 modeling with panel numbering, fabrication schedules, and installation documentation.</p>
+
+                <h3>Challenge</h3>
+                <ul class="checklist">
+                    <li>Complex curved glass façade requiring parametric modeling</li>
+                    <li>500+ individual glass panels requiring unique numbering</li>
+                    <li>Coordination with MEP systems and structural elements</li>
+                    <li>Accurate quantity extraction for fabrication and procurement</li>
+                </ul>
+
+                <h3>Solution</h3>
+                <ul class="arrow-list">
+                    <li>Developed parametric glass panel family in Revit</li>
+                    <li>Used Dynamo scripting for automated panel numbering</li>
+                    <li>Created comprehensive schedules for mullions, panels, and hardware</li>
+                    <li>Performed clash detection with MEP and structural elements</li>
+                    <li>Generated shop drawings and fabrication documentation</li>
+                </ul>
+
+                <h3>Results</h3>
+                <div class="stats-grid-2col">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <p class="stat-label">Uniquely numbered and scheduled glass panels</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30%</div>
+                        <p class="stat-label">Cost savings through accurate BOM</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <p class="stat-label">Clash-free coordination</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <p class="stat-label">Comprehensive schedules & details</p>
+                    </div>
+                </div>
+
+                <h3>Deliverables</h3>
+                <ul class="checklist-small">
+                    <li>LOD 400 Revit model</li>
+                    <li>Façade elevations with panel numbering</li>
+                    <li>Component schedules (panels, mullions, hardware)</li>
+                    <li>Shop drawings and details</li>
+                    <li>Navisworks coordination file</li>
+                    <li>BOQ and quantity reports</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filter Tags Section -->
+    <section>
+        <div class="container">
+            <h2>Project Categories</h2>
+            <div class="section-subtitle">Browse by Type</div>
+            
+            <div class="filter-tags">
+                <span class="filter-tag active">BIM Modeling</span>
+                <span class="filter-tag">Glass Façade</span>
+                <span class="filter-tag">Interior Design</span>
+                <span class="filter-tag">Shop Drawings</span>
+                <span class="filter-tag">Parametric Design</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="dark-bg">
+        <div class="container text-center">
+            <h2>Have a Project in Mind?</h2>
+            <p>Let's discuss how our BIM expertise and architectural practice can support your next project.</p>
+            <a href="contact.html" class="btn btn-primary mt-3">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <h4>The Manospace Architects</h4>
+                <p>Bengaluru-based architecture and BIM practice specializing in architectural design, façade BIM modeling, interiors, and construction documentation.</p>
+            </div>
+            
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="bim.html">BIM Expertise</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Contact</h4>
+                <p><strong>Location:</strong> Bengaluru, Karnataka</p>
+                <p><strong>Email:</strong> <a href="mailto:info@themanospacearchitects.com">info@themanospacearchitects.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+918088439604">+91 8088 439 604</a></p>
+            </div>
+            
+            <div>
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/the_manospace_architects" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/the-manospace-architects/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/918088439604" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@themanospacearchitects.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Manospace Architects. All rights reserved. | Bengaluru, Karnataka, India</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

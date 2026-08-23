@@ -1,171 +1,156 @@
-/*
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function() {
-
 	"use strict";
 
-	var	$body = document.querySelector('body');
+	// Function to handle header shrink on scroll
+	function handleHeaderScroll() {
+		const header = document.querySelector('header');
+		if (header) {
+			if (window.scrollY > 50) {
+				header.classList.add('scrolled');
+			} else {
+				header.classList.remove('scrolled');
+			}
+		}
+	}
 
-	// Methods/polyfills.
+	window.addEventListener('scroll', handleHeaderScroll);
 
-		// classList | (c) @remy | github.com/remy/polyfills | rem.mit-license.org
-			!function(){function t(t){this.el=t;for(var n=t.className.replace(/^\s+|\s+$/g,"").split(/\s+/),i=0;i<n.length;i++)e.call(this,n[i])}function n(t,n,i){Object.defineProperty?Object.defineProperty(t,n,{get:i}):t.__defineGetter__(n,i)}if(!("undefined"==typeof window.Element||"classList"in document.documentElement)){var i=Array.prototype,e=i.push,s=i.splice,o=i.join;t.prototype={add:function(t){this.contains(t)||(e.call(this,t),this.el.className=this.toString())},contains:function(t){return-1!=this.el.className.indexOf(t)},item:function(t){return this[t]||null},remove:function(t){if(this.contains(t)){for(var n=0;n<this.length&&this[n]!=t;n++);s.call(this,n,1),this.el.className=this.toString()}},toString:function(){return o.call(this," ")},toggle:function(t){return this.contains(t)?this.remove(t):this.add(t),this.contains(t)}},window.DOMTokenList=t,n(Element.prototype,"classList",function(){return new t(this)})}}();
+	document.addEventListener('DOMContentLoaded', function() {
 
-		// canUse
-			window.canUse=function(p){if(!window._canUse)window._canUse=document.createElement("div");var e=window._canUse.style,up=p.charAt(0).toUpperCase()+p.slice(1);return p in e||"Moz"+up in e||"Webkit"+up in e||"O"+up in e||"ms"+up in e};
+		// Mobile Menu Toggle
+		const mobileMenuButton = document.querySelector('.mobile-menu');
+		const nav = document.querySelector('nav');
 
-		// window.addEventListener
-			(function(){if("addEventListener"in window)return;window.addEventListener=function(type,f){window.attachEvent("on"+type,f)}})();
+		if (mobileMenuButton && nav) {
+			const menuIcon = mobileMenuButton.querySelector('i');
+			mobileMenuButton.setAttribute('aria-expanded', 'false');
 
-	// Play initial animations on page load.
-		window.addEventListener('load', function() {
-			window.setTimeout(function() {
-				$body.classList.remove('is-preload');
-			}, 100);
+			mobileMenuButton.addEventListener('click', function() {
+				nav.classList.toggle('active');
+				mobileMenuButton.setAttribute('aria-expanded', String(nav.classList.contains('active')));
+				if (menuIcon) {
+					menuIcon.classList.toggle('fa-bars');
+					menuIcon.classList.toggle('fa-times');
+				}
+			});
+		}
+
+		// Active Navigation Link
+		const currentLocation = window.location.href;
+		const navLinks = document.querySelectorAll('nav a');
+		navLinks.forEach(link => {
+			if (link.href === currentLocation) {
+				link.classList.add('active');
+			}
 		});
 
-	// Slideshow Background.
-		(function() {
+		// Fade-in on Scroll Animation
+		const sections = document.querySelectorAll('section');
 
-			// Settings.
-				var settings = {
+		// Add the class to all sections initially
+		sections.forEach(section => {
+			section.classList.add('fade-in-section');
+		})
 
-					// Images (in the format of 'url': 'alignment').
-						images: {
-							'images/bg01.jpg': 'center',
-							'images/bg02.jpg': 'center',
-							'images/bg03.jpg': 'center'
-						},
+		const observerOptions = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.1
+		};
 
-					// Delay.
-						delay: 6000
-
-				};
-
-			// Vars.
-				var	pos = 0, lastPos = 0,
-					$wrapper, $bgs = [], $bg,
-					k, v;
-
-			// Create BG wrapper, BGs.
-				$wrapper = document.createElement('div');
-					$wrapper.id = 'bg';
-					$body.appendChild($wrapper);
-
-				for (k in settings.images) {
-
-					// Create BG.
-						$bg = document.createElement('div');
-							$bg.style.backgroundImage = 'url("' + k + '")';
-							$bg.style.backgroundPosition = settings.images[k];
-							$wrapper.appendChild($bg);
-
-					// Add it to array.
-						$bgs.push($bg);
-
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+					// Optional: unobserve the element after it's visible
+					// observer.unobserve(entry.target);
+				} else {
+					// Optional: remove class if you want the animation to repeat
+					// entry.target.classList.remove('is-visible');
 				}
+			});
+		}, observerOptions);
 
-			// Main loop.
-				$bgs[pos].classList.add('visible');
-				$bgs[pos].classList.add('top');
+		sections.forEach(section => {
+			observer.observe(section);
+		});
 
-				// Bail if we only have a single BG or the client doesn't support transitions.
-					if ($bgs.length == 1
-					||	!canUse('transition'))
-						return;
+		// Contact Form Validation
+		const contactForm = document.getElementById('contact-form');
+		if (contactForm) {
+			const formStatus = document.createElement('div');
+			formStatus.className = 'form-status';
+			contactForm.parentNode.insertBefore(formStatus, contactForm.nextSibling);
 
-				window.setInterval(function() {
+			contactForm.addEventListener('submit', function(e) {
+				e.preventDefault();
+				
+				if (validateForm()) {
+					const formData = new FormData(contactForm);
+					const submitButton = contactForm.querySelector('button[type="submit"]');
+					const originalButtonText = submitButton.textContent;
+					
+					submitButton.disabled = true;
+					submitButton.textContent = 'Sending...';
 
-					lastPos = pos;
-					pos++;
+					fetch(contactForm.action, {
+						method: 'POST',
+						body: formData,
+						headers: {
+							'Accept': 'application/json'
+						}
+					}).then(response => {
+						if (response.ok) {
+							formStatus.textContent = 'Thanks for your message! We will get back to you shortly.';
+							formStatus.className = 'form-status success';
+							contactForm.reset();
+						} else {
+							response.json().then(data => {
+								if (Object.hasOwn(data, 'errors')) {
+									formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+								} else {
+									formStatus.textContent = 'Oops! There was a problem submitting your form.';
+								}
+								formStatus.className = 'form-status error';
+							})
+						}
+					}).catch(error => {
+						formStatus.textContent = 'Oops! There was a problem submitting your form.';
+						formStatus.className = 'form-status error';
+					}).finally(() => {
+						submitButton.disabled = false;
+						submitButton.textContent = originalButtonText;
+					});
+				}
+			});
 
-					// Wrap to beginning if necessary.
-						if (pos >= $bgs.length)
-							pos = 0;
+			const validateForm = () => {
+				let isValid = true;
+				const requiredFields = contactForm.querySelectorAll('[required]');
+				
+				requiredFields.forEach(field => {
+					const errorElement = field.nextElementSibling && field.nextElementSibling.classList.contains('error-message') ? field.nextElementSibling : document.createElement('span');
+					if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('error-message')) {
+						errorElement.className = 'error-message';
+						field.parentNode.insertBefore(errorElement, field.nextSibling);
+					}
 
-					// Swap top images.
-						$bgs[lastPos].classList.remove('top');
-						$bgs[pos].classList.add('visible');
-						$bgs[pos].classList.add('top');
-
-					// Hide last image after a short delay.
-						window.setTimeout(function() {
-							$bgs[lastPos].classList.remove('visible');
-						}, settings.delay / 2);
-
-				}, settings.delay);
-
-		})();
-
-	// Signup Form.
-		(function() {
-
-			// Vars.
-				var $form = document.querySelectorAll('#signup-form')[0],
-					$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
-					$message;
-
-			// Bail if addEventListener isn't supported.
-				if (!('addEventListener' in $form))
-					return;
-
-			// Message.
-				$message = document.createElement('span');
-					$message.classList.add('message');
-					$form.appendChild($message);
-
-				$message._show = function(type, text) {
-
-					$message.innerHTML = text;
-					$message.classList.add(type);
-					$message.classList.add('visible');
-
-					window.setTimeout(function() {
-						$message._hide();
-					}, 3000);
-
-				};
-
-				$message._hide = function() {
-					$message.classList.remove('visible');
-				};
-
-			// Events.
-			// Note: If you're *not* using AJAX, get rid of this event listener.
-				$form.addEventListener('submit', function(event) {
-
-					event.stopPropagation();
-					event.preventDefault();
-
-					// Hide message.
-						$message._hide();
-
-					// Disable submit.
-						$submit.disabled = true;
-
-					// Process form.
-					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
-					// but there's enough here to piece together a working AJAX submission call that does.
-						window.setTimeout(function() {
-
-							// Reset form.
-								$form.reset();
-
-							// Enable submit.
-								$submit.disabled = false;
-
-							// Show message.
-								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
-
-						}, 750);
-
+					if (field.value.trim() === '') {
+						isValid = false;
+						field.classList.add('invalid');
+						errorElement.textContent = 'This field is required.';
+					} else if (field.type === 'email' && !/^\S+@\S+\.\S+$/.test(field.value)) {
+						isValid = false;
+						field.classList.add('invalid');
+						errorElement.textContent = 'Please enter a valid email address.';
+					} else {
+						field.classList.remove('invalid');
+						errorElement.textContent = '';
+					}
 				});
-
-		})();
+				return isValid;
+			}
+		}
+	});
 
 })();

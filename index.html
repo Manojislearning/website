@@ -1,36 +1,440 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Eventually by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-			<header id="header">
-				<h1>The ManoSpace Architects</h1>
-				<p>Designing Spaces That Feel Right</p>
-        <nav>
-  <ul>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-			</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Manospace Architects | Architecture & BIM Services in Bengaluru</title>
+    <meta name="description" content="The Manospace Architects is a Bengaluru-based architecture and BIM practice offering architectural design, Revit modeling, glass façade BIM, interiors, landscape, and shop drawing services.">
+    <meta name="keywords" content="Architecture, BIM, Revit, Glass Façade, Bengaluru, Interior Design, Landscape Design">
     
-		<!-- Footer -->
-			<footer id="footer">
-				
-			
-			</footer>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
+	    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-mark-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 85 V 15 L 50 50 L 15 85 Z" fill="var(--brand-accent)" stroke="var(--brand-accent)" stroke-width="var(--logo-stroke-width)" stroke-linejoin="round"/>
+                    <path d="M50 50 L 85 15 V 85" fill="none" stroke="var(--brand-accent)" stroke-width="var(--logo-stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="logo-text-group">
+                    <div class="logo">MANOSPACE</div>
+                    <div class="logo-text">Architects</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="bim.html">BIM Expertise</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="cta-button">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu" type="button" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
 
-	</body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="animated-bg">
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+        </div>
+        <div class="hero-content">
+            <div class="hero-subtitle">ARCHITECTURE | BIM | FAÇADE MODELING | INTERIORS</div>
+            <div class="hero-title-container">
+                <svg class="hero-title-svg" viewBox="0 0 800 100">
+                    <text class="hero-title-text" x="50%" y="50%" dy=".35em" text-anchor="middle">MANOSPACE</text>
+                </svg>
+                <div class="hero-architects-text">Architects</div>
+            </div>
+            <p class="hero-description">We bring architectural designs to life with digital precision. Our BIM-powered approach provides seamless coordination, predictable costs, and crystal-clear plans for flawless construction.</p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn">View Projects</a>
+                <a href="contact.html" class="btn btn-primary">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <h2>Practical Design with Digital Precision</h2>
+        <p>We combine architectural excellence with BIM-driven workflows to deliver projects with accuracy, clarity, and execution-ready documentation. Our practice spans architectural design, parametric façade modeling, interiors, landscape, and specialized construction documentation.</p>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="light-bg">
+        <div class="container">
+            <h2 id="services">Our Services</h2>
+            <div class="section-subtitle">Architecture | BIM | Documentation</div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-cube service-icon"></i>
+                    <h3>Architectural Design</h3>
+                    <p>Residential, commercial, renovation, and planning services with focus on practical design and site context.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-cubes service-icon"></i>
+                    <h3>BIM Modeling</h3>
+                    <p>Revit-based BIM modeling for architecture, façade coordination, clash detection, and quantification.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-window service-icon"></i>
+                    <h3>Glass Façade BIM</h3>
+                    <p>LOD 400 glass façade modeling, panel numbering, elevations, schedules, and quantity extraction.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-gears service-icon"></i>
+                    <h3>Dynamo Automation</h3>
+                    <p>Automated workflows for panel numbering, parameter control, quantity extraction, and repetitive tasks.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-sofa service-icon"></i>
+                    <h3>Interior Design</h3>
+                    <p>Interior planning, layouts, material coordination, and design documentation with execution clarity.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-tree service-icon"></i>
+                    <h3>Landscape Design</h3>
+                    <p>Landscape concepts, layouts, and integrated outdoor planning with site analysis.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-ruler service-icon"></i>
+                    <h3>Shop Drawings</h3>
+                    <p>Construction and fabrication-oriented drawings with precise specifications for execution.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-chart-bar service-icon"></i>
+                    <h3>Quantity Take-Offs</h3>
+                    <p>BIM-based schedules for panels, mullions, façade elements, and architectural quantities.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-layer-group service-icon"></i>
+                    <h3>Revit Families</h3>
+                    <p>Custom Revit family creation for parametric design and standardized modeling workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project -->
+    <section>
+        <div class="container">
+            <div class="featured-project">
+                <div class="featured-project-image">
+                    <!-- <img src="path/to/your/image.jpg" alt="Featured architectural project by Manospace Architects"> -->
+                </div>
+                <div class="featured-project-content">
+                    <h2>Sapthagiri Hospital – Glass Façade BIM</h2>
+                    <p>BIM-based LOD 400 glass façade model with panel numbering, façade elevations, quantity schedules, and documentation for fabrication and installation coordination.</p>
+                    <div class="tags">
+                        <span class="tag">BIM</span>
+                        <span class="tag">Revit</span>
+                        <span class="tag">Glass Façade</span>
+                        <span class="tag">LOD 400</span>
+                        <span class="tag">Quantity Take-Off</span>
+                        <span class="tag">Dynamo</span>
+                    </div>
+                    <a href="projects.html" class="btn btn-primary mt-3">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIM Expertise Preview -->
+    <section class="light-bg">
+        <div class="container">
+            <h2>BIM Expertise Highlights</h2>
+            <div class="section-subtitle">Tools & Capabilities</div>
+            
+            <div class="bim-services">
+                <div class="bim-service-item">
+                    <h4>Architectural BIM Modeling</h4>
+                    <p>Complete architectural models with accurate documentation and coordination workflows.</p>
+                </div>
+                
+                <div class="bim-service-item">
+                    <h4>Façade BIM Modeling</h4>
+                    <p>Parametric glass and metal façade systems with LOD 300/350/400 detailing.</p>
+                </div>
+                
+                <div class="bim-service-item">
+                    <h4>Clash Coordination Support</h4>
+                    <p>Navisworks-based clash detection and resolution for multi-discipline coordination.</p>
+                </div>
+                
+                <div class="bim-service-item">
+                    <h4>Panel Numbering & Schedules</h4>
+                    <p>Automated panel numbering systems and comprehensive quantity schedules.</p>
+                </div>
+            </div>
+
+            <h3 class="mt-4-centered">Tools We Use</h3>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <i class="fas fa-cube tool-icon"></i>
+                    <h4>Revit</h4>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-cogs tool-icon"></i>
+                    <h4>Dynamo</h4>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-project-diagram tool-icon"></i>
+                    <h4>Navisworks</h4>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-table tool-icon"></i>
+                    <h4>Revit Schedules</h4>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="bim.html" class="btn btn-primary">Explore BIM Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section>
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="section-subtitle">Recent Work</div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- <img src="path/to/your/image.jpg" alt="Hospital building exterior"> -->
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Glass Façade BIM</span>
+                        <h3>Sapthagiri Hospital</h3>
+                        <p class="project-description">LOD 400 glass façade BIM model with panel numbering and fabrication documentation.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">BIM</span><span class="project-tag">Revit</span><span class="project-tag">Façade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- <img src="path/to/your/image.jpg" alt="Modern office interior"> -->
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Interior Renovation</span>
+                        <h3>RBI Bangalore</h3>
+                        <p class="project-description">Interior renovation project with comprehensive BIM documentation and coordination.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Interior</span><span class="project-tag">Renovation</span><span class="project-tag">BIM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- <img src="path/to/your/image.jpg" alt="Residential home exterior"> -->
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Shop Drawings</span>
+                        <h3>Sankya Residence</h3>
+                        <p class="project-description">Ceiling panel calculation and shop drawing support for residential execution.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Shop Drawings</span><span class="project-tag">Residential</span><span class="project-tag">Documentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- <img src="path/to/your/image.jpg" alt="Abstract parametric design pattern"> -->
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Parametric Design</span>
+                        <h3>Parametric Elevation Study</h3>
+                        <p class="project-description">Parametric façade design study using digital modeling and Dynamo workflows.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Dynamo</span><span class="project-tag">Parametric</span><span class="project-tag">BIM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="projects.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="light-bg">
+        <div class="container">
+            <h2>Why Work With Us</h2>
+            <div class="section-subtitle">Our Approach</div>
+            
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <i class="fas fa-check-circle why-card-icon"></i>
+                    <h3>BIM-Based Workflow</h3>
+                    <p>Accurate, coordinated models for better documentation and quantity control.</p>
+                </div>
+                
+                <div class="why-card">
+                    <i class="fas fa-drafting-compass why-card-icon"></i>
+                    <h3>Design + Documentation</h3>
+                    <p>We combine architectural vision with execution-ready documentation.</p>
+                </div>
+                
+                <div class="why-card">
+                    <i class="fas fa-tools why-card-icon"></i>
+                    <h3>Façade & Technical Expertise</h3>
+                    <p>Specialized experience in glass façade, paneling, and technical modeling.</p>
+                </div>
+                
+                <div class="why-card">
+                    <i class="fas fa-sync-alt why-card-icon"></i>
+                    <h3>Practical Execution Understanding</h3>
+                    <p>Documentation and designs created with construction reality in mind.</p>
+                </div>
+                
+                <div class="why-card">
+                    <i class="fas fa-list-check why-card-icon"></i>
+                    <h3>Accurate Drawings & Schedules</h3>
+                    <p>Precise specifications and BOQ support for seamless execution.</p>
+                </div>
+                
+                <div class="why-card">
+                    <i class="fas fa-comments why-card-icon"></i>
+                    <h3>Clear Communication</h3>
+                    <p>Clean, professional deliverables with transparent workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section>
+        <div class="container">
+            <h2>Our Process</h2>
+            <div class="section-subtitle">From Concept to Execution</div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Requirement Discussion</h3>
+                    <p>Understanding project goals, scope, and technical requirements.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Site & Project Study</h3>
+                    <p>Thorough analysis of site context and project parameters.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Concept or BIM Setup</h3>
+                    <p>Initial concept development or BIM framework establishment.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Design Development</h3>
+                    <p>Detailed model development and design refinement.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h3>Coordination & Revision</h3>
+                    <p>Multi-discipline coordination and iterative improvements.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">06</div>
+                    <h3>Documentation</h3>
+                    <p>Final drawings, schedules, and construction documentation.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">07</div>
+                    <h3>Quantity & Execution Support</h3>
+                    <p>BOQ preparation and on-site support for seamless execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="dark-bg">
+        <div class="container text-center">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss your architectural vision and how we can bring it to life with precision and clarity.</p>
+            <a href="contact.html" class="btn btn-primary mt-3">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <h4>The Manospace Architects</h4>
+                <p>Bengaluru-based architecture and BIM practice specializing in architectural design, façade BIM modeling, interiors, and construction documentation.</p>
+            </div>
+            
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="bim.html">BIM Expertise</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Contact</h4>
+                <p><strong>Location:</strong> Bengaluru, Karnataka</p>
+                <p><strong>Email:</strong> <a href="mailto:info@themanospacearchitects.com">info@themanospacearchitects.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+918088439604">+91 8088 439 604</a></p>
+            </div>
+            
+            <div>
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/the_manospace_architects" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/the-manospace-architects/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/918088439604" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@themanospacearchitects.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Manospace Architects. All rights reserved. | Bengaluru, Karnataka, India</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

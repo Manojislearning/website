@@ -1,0 +1,10 @@
+<svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- 
+  Architectural Logo for Manospace Architects
+  - Combines a building silhouette/blueprint style with the letter 'M'.
+  - The base line represents a foundation.
+  - The inner lines form an 'M' and evoke a roofline or structural element.
+-->
+<path d="M10 90H90" stroke="#252525" stroke-width="8" stroke-linecap="round"/>
+<path d="M20 90V20L50 45L80 20V90" stroke="#252525" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
